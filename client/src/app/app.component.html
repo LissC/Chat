@@ -1,0 +1,29 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon mat-list-icon>person</mat-icon>
+        <span mat-line>Author</span>
+        <span mat-line>- Liseth Cabezas</span>
+
+      </a>
+      <a mat-list-item >
+        <mat-icon mat-list-icon>code</mat-icon>
+        <span mat-line>Codigo Github</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+      <span>Chat en Tiempo Real -  Ing en Ciencia de la Computacion - Com460</span>
+    </mat-toolbar>
+
+    <div class="app-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>
