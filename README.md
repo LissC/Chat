@@ -1,4 +1,4 @@
-Chat en tiempo real usando Socket.io y TypeScript
+Chat usando Socket.io y TypeScript
 =========================================
 
  `TypeScript` language
