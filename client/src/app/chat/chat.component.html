@@ -13,7 +13,7 @@
           <span> {{message.content}} </span>
         </p>
         <p mat-line *ngIf="message.action === action.JOINED" class="chat-notification">
-          <span> <b>{{message.from.name}}</b> Se unio a la conversacion. </span>
+          <span> <b>{{message.from.name}}</b> Se unio a la conversacion.</span>
         </p>
         <p mat-line *ngIf="message.action === action.RENAME" class="chat-notification">
           <span> <b>{{message.content.previousUsername}}</b> is now <b>{{message.content.username}}</b> </span>

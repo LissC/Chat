@@ -8,6 +8,7 @@ import { User } from './shared/model/user';
 import { SocketService } from './shared/services/socket.service';
 import { DialogUserComponent } from './dialog-user/dialog-user.component';
 import { DialogUserType } from './dialog-user/dialog-user-type';
+import { getLocaleDateTimeFormat } from '@angular/common';
 
 
 const AVATAR_URL = 'https://api.adorable.io/avatars/285';
@@ -27,7 +28,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
   defaultDialogUserParams: any = {
     disableClose: true,
     data: {
-      title: 'Welcome',
+      title: 'Bienvenido',
       dialogType: DialogUserType.NEW
     }
   };
@@ -101,7 +102,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
     this.openUserPopup({
       data: {
         username: this.user.name,
-        title: 'Edit Details',
+        title: 'Editar Detalles',
         dialogType: DialogUserType.EDIT
       }
     });
@@ -149,6 +150,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
         action: action,
         content: {
           username: this.user.name,
+          hora: getLocaleDateTimeFormat,
           previousUsername: params.previousUsername
         }
       };
